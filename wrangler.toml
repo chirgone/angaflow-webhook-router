@@ -1,0 +1,22 @@
+name = "angaflow-webhook-router"
+main = "src/index.ts"
+compatibility_date = "2024-10-22"
+compatibility_flags = ["nodejs_compat"]
+
+account_id = "e3421356cff91cefbf0e954753f49f17"
+workers_dev = true
+
+[vars]
+ENVIRONMENT = "production"
+
+# Custom domain
+[[routes]]
+pattern = "webhooks.angaflow.com/*"
+zone_name = "angaflow.com"
+
+# Secrets to configure via: wrangler secret put <NAME>
+# MERCADOPAGO_ACCESS_TOKEN - MP access token for fetching payment details
+# MERCADOPAGO_WEBHOOK_SECRET - MP webhook secret for HMAC validation
+# INTERNAL_WEBHOOK_SECRET - Shared secret for internal backend auth
+# CFDI_BACKEND_URL (optional, default: https://backend.angaflow.mx)
+# SECURITY_BACKEND_URL (optional, default: https://api.angaflow.com)

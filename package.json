@@ -1,0 +1,16 @@
+{
+  "name": "angaflow-webhook-router",
+  "version": "1.0.0",
+  "description": "Webhook router for Angaflow - routes Mercado Pago webhooks to correct backend",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241127.0",
+    "wrangler": "^3.94.0"
+  }
+}
